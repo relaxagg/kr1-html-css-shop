@@ -44,6 +44,11 @@
   box-sizing: border-box;
 }
 
+/* Плавная прокрутка к якорям */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -114,6 +119,12 @@ a:focus-visible {
   cursor: not-allowed;
 }
 
+/* Подсветка элемента, на который ведёт якорная ссылка */
+:target {
+  outline: 2px dashed var(--color-primary);
+  outline-offset: 4px;
+}
+
 /* Кнопки внутри формы тоже получают состояние :disabled */
 .form-actions button:disabled {
   opacity: 0.6;
@@ -159,6 +170,24 @@ a:focus-visible {
 .site-nav__list a:hover {
   color: var(--color-primary-dark);
   text-decoration: underline;
+}
+
+/* Хлебные крошки на внутренних страницах */
+.breadcrumbs {
+  max-width: var(--container-width);
+  margin: 0 auto var(--space-md);
+  font-size: 14px;
+  color: var(--color-muted);
+}
+
+.breadcrumbs a {
+  color: var(--color-primary);
+}
+
+/* Разделитель перед названием текущей страницы */
+.breadcrumbs span::before {
+  content: " / ";
+  color: var(--color-muted);
 }
 
 /* Hero-блок — первый крупный блок страницы */
