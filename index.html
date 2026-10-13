@@ -3,154 +3,200 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Главная страница учебного интернет-магазина: популярные товары, преимущества и форма заявки.">
-  <title>Главная — Учебный интернет-магазин</title>
+  <meta name="description" content="TechPoint — смартфоны и гаджеты с проверкой перед продажей и гарантией 30 дней.">
+  <title>Главная — TechPoint, смартфоны и гаджеты</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
   <header class="site-header">
     <div class="site-header__inner">
-      <a class="site-header__logo" href="index.html">ShopProject</a>
+      <a class="site-header__logo" href="index.html">Tech<span class="site-header__logo-accent">Point</span></a>
       <nav class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
-          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="index.html" aria-current="page">Главная</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="index.html#advantages">Преимущества</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="index.html#popular">Популярные товары</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="index.html#contacts">Обратная связь</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html#popular">Популярное</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main class="page-main" id="main">
     <section class="hero">
-      <h1 class="hero__title">Учебный интернет-магазин</h1>
-      <p class="hero__text">
-        Это стартовая страница учебного frontend-проекта.
-        В дальнейшем на её основе будет разработан многостраничный сайт
-        интернет-магазина или каталога услуг.
-      </p>
-      <a class="button button--primary" href="#popular">Перейти к товарам</a>
+      <div class="hero__content">
+        <p class="hero__label">Магазин техники TechPoint</p>
+        <h1 class="hero__title">Смартфоны и гаджеты <span class="hero__accent">с проверкой</span> перед продажей</h1>
+        <p class="hero__text">
+          Samsung, Xiaomi, POCO и Honor по честным ценам. Каждое устройство проходит
+          проверку, а на покупку действует гарантия 30 дней.
+        </p>
+        <div class="hero__actions">
+          <a class="button button--primary" href="catalog.html">Перейти в каталог</a>
+          <a class="button button--ghost" href="#contacts">Связаться с нами</a>
+        </div>
+      </div>
+      <img class="hero__image" src="images/phone-hero.svg" alt="Иллюстрация смартфона" width="260" height="260">
     </section>
 
     <section class="section" id="advantages">
-      <h2 class="section__title">Преимущества проекта</h2>
+      <h2 class="section__title">Почему выбирают TechPoint</h2>
       <ul class="advantages-list">
-        <li class="advantages-list__item">понятная HTML-структура;</li>
-        <li class="advantages-list__item">семантические блоки страницы;</li>
-        <li class="advantages-list__item">подключение внешнего CSS-файла;</li>
-        <li class="advantages-list__item">подготовка к разработке многостраничного сайта.</li>
+        <li class="advantages-list__item">
+          <span class="advantages-list__icon" aria-hidden="true">🔍</span>
+          <strong class="advantages-list__title">Проверка 30+ пунктов</strong>
+          <p class="advantages-list__text">Каждое устройство тестируем перед продажей: экран, камеры, батарея, связь.</p>
+        </li>
+        <li class="advantages-list__item">
+          <span class="advantages-list__icon" aria-hidden="true">🛡️</span>
+          <strong class="advantages-list__title">Гарантия 30 дней</strong>
+          <p class="advantages-list__text">Если что-то пойдёт не так, обменяем устройство или вернём деньги.</p>
+        </li>
+        <li class="advantages-list__item">
+          <span class="advantages-list__icon" aria-hidden="true">🚚</span>
+          <strong class="advantages-list__title">Доставка и самовывоз</strong>
+          <p class="advantages-list__text">Привезём курьером по городу или отправим транспортной компанией.</p>
+        </li>
+        <li class="advantages-list__item">
+          <span class="advantages-list__icon" aria-hidden="true">💬</span>
+          <strong class="advantages-list__title">Честное описание</strong>
+          <p class="advantages-list__text">Указываем состояние, комплектацию и ёмкость батареи без приукрашивания.</p>
+        </li>
       </ul>
     </section>
 
     <section class="section" id="popular">
       <h2 class="section__title">Популярные товары</h2>
-
       <div class="products-grid">
+        <article class="product-card product-card--discount">
+          <span class="badge badge--sale product-card__badge">Скидка</span>
+          <img class="product-card__image" src="images/phone-graphite.svg" alt="Смартфон Samsung Galaxy S23 Ultra, цвет графит" width="240" height="200">
+          <p class="product-card__category">Смартфоны</p>
+          <h3 class="product-card__title"><a class="product-card__link" href="product.html">Samsung Galaxy S23 Ultra</a></h3>
+          <p class="product-card__description">256 ГБ, экран 6,8", камера 200 Мп, стилус S Pen</p>
+          <p class="product-card__price">64 990 ₽ <s class="product-card__old-price">74 990 ₽</s></p>
+          <button class="button button--primary product-card__button" type="button" data-product="Samsung Galaxy S23 Ultra">
+            Заказать
+          </button>
+        </article>
         <article class="product-card product-card--featured">
-          <h3 class="product-card__title">Товар 1</h3>
-          <p class="product-card__description">Краткое описание учебного товара.</p>
-          <p class="product-card__price">Цена: 1000 руб.</p>
-          <button class="button button--primary product-card__button" type="button" data-product="Товар 1">
+          <span class="badge badge--hit product-card__badge">Хит</span>
+          <img class="product-card__image" src="images/phone-violet.svg" alt="Смартфон Xiaomi Redmi Note 13 Pro, фиолетовый" width="240" height="200">
+          <p class="product-card__category">Смартфоны</p>
+          <h3 class="product-card__title"><a class="product-card__link" href="product.html">Xiaomi Redmi Note 13 Pro</a></h3>
+          <p class="product-card__description">8/256 ГБ, AMOLED 120 Гц, камера 200 Мп</p>
+          <p class="product-card__price">24 990 ₽</p>
+          <button class="button button--primary product-card__button" type="button" data-product="Xiaomi Redmi Note 13 Pro">
             Заказать
           </button>
         </article>
         <article class="product-card">
-          <h3 class="product-card__title">Товар 2</h3>
-          <p class="product-card__description">Краткое описание учебного товара.</p>
-          <p class="product-card__price">Цена: 1500 руб.</p>
-          <button class="button button--primary product-card__button" type="button" data-product="Товар 2">
-            Заказать
-          </button>
-        </article>
-        <article class="product-card">
-          <h3 class="product-card__title">Товар 3</h3>
-          <p class="product-card__description">Краткое описание учебного товара.</p>
-          <p class="product-card__price">Цена: 2000 руб.</p>
-          <button class="button button--primary product-card__button" type="button" data-product="Товар 3">
+          <span class="badge badge--new product-card__badge">Новинка</span>
+          <img class="product-card__image" src="images/phone-yellow.svg" alt="Смартфон POCO X6 Pro, жёлтый" width="240" height="200">
+          <p class="product-card__category">Смартфоны</p>
+          <h3 class="product-card__title"><a class="product-card__link" href="product.html">POCO X6 Pro</a></h3>
+          <p class="product-card__description">12/512 ГБ, Dimensity 8300-Ultra, 5000 мА·ч</p>
+          <p class="product-card__price">27 990 ₽</p>
+          <button class="button button--primary product-card__button" type="button" data-product="POCO X6 Pro">
             Заказать
           </button>
         </article>
       </div>
     </section>
 
+    <section class="section faq" id="faq">
+      <h2 class="section__title">Частые вопросы</h2>
+      <details class="faq__item">
+        <summary class="faq__question">Как вы проверяете устройства?</summary>
+        <p class="faq__answer">Тестируем экран, сенсор, камеры, динамики, микрофоны, связь, Wi‑Fi, зарядку и состояние батареи. Результаты проверки сообщаем покупателю.</p>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__question">Что входит в гарантию?</summary>
+        <p class="faq__answer">В течение 30 дней мы бесплатно обменяем устройство или вернём деньги, если обнаружится заводской дефект.</p>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__question">Можно ли посмотреть телефон перед покупкой?</summary>
+        <p class="faq__answer">Да, оставьте заявку — менеджер согласует время встречи, и вы сможете проверить устройство лично.</p>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__question">Как оплатить заказ?</summary>
+        <p class="faq__answer">Наличными или переводом при получении. Предоплата не требуется.</p>
+      </details>
+    </section>
+
     <aside class="aside-info">
-      <h2 class="aside-info__title">Информация для студентов</h2>
+      <h2 class="aside-info__title">Не нашли нужную модель?</h2>
       <p class="aside-info__text">
-        На следующих практических занятиях этот проект будет расширяться:
-        появятся формы, модальное окно, дополнительные страницы, Flex/Grid,
-        БЭМ-структура и адаптивная версия сайта.
+        Оставьте <a href="order.html">заявку</a> — подберём устройство под ваш бюджет
+        и сообщим, когда оно появится в наличии.
       </p>
     </aside>
   </main>
 
   <footer class="site-footer" id="contacts">
-    <p class="site-footer__text">&copy; 2026 Учебный проект. Все права защищены.</p>
-    <p class="site-footer__text">Дисциплина: Фронтенд и бэкенд разработка</p>
+    <div class="site-footer__inner">
+      <div class="site-footer__column">
+        <p class="site-footer__logo">TechPoint</p>
+        <p class="site-footer__text">
+          Смартфоны и гаджеты с проверкой перед продажей и гарантией 30 дней.
+        </p>
+      </div>
+      <nav class="site-footer__column" aria-label="Навигация в подвале">
+        <h2 class="site-footer__title">Разделы</h2>
+        <ul class="site-footer__list">
+          <li><a class="site-footer__link" href="catalog.html">Каталог</a></li>
+          <li><a class="site-footer__link" href="order.html">Оформить заявку</a></li>
+          <li><a class="site-footer__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="site-footer__column">
+        <h2 class="site-footer__title">Связаться</h2>
+        <p class="site-footer__text">+7 (900) 000-00-00</p>
+        <p class="site-footer__text">info@techpoint.example</p>
+        <p class="site-footer__text">Ежедневно 10:00–20:00</p>
+      </div>
+    </div>
+    <p class="site-footer__bottom">
+      &copy; 2026 TechPoint. Учебный проект по дисциплине «Фронтенд и бэкенд разработка». Цены указаны для примера.
+    </p>
   </footer>
+
+  <a class="to-top" href="#" aria-label="Наверх">↑</a>
 
   <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
     <h2 class="order-dialog__title" id="order-dialog-title">Оформление заявки</h2>
+    <p class="order-dialog__product">Товар: <span class="order-dialog__product-name" id="dialog-product-name"></span></p>
     <form class="order-form" id="order-form" action="#" method="post" novalidate>
       <input id="selected-product" name="selected-product" type="hidden">
 
       <div class="order-form__field">
-        <label class="order-form__label" for="order-name">Имя</label>
-        <input
-          class="order-form__input"
-          id="order-name"
-          name="name"
-          type="text"
-          placeholder="Введите ваше имя"
-          minlength="2"
-          autocomplete="given-name"
-          required
-        >
+        <label class="order-form__label" for="order-name">Имя <span class="order-form__required" aria-hidden="true">*</span></label>
+        <input class="order-form__input" id="order-name" name="name" type="text" placeholder="Введите ваше имя" minlength="2" autocomplete="given-name" required>
       </div>
 
       <div class="order-form__field">
-        <label class="order-form__label" for="order-email">E-mail</label>
-        <input
-          class="order-form__input"
-          id="order-email"
-          name="email"
-          type="email"
-          placeholder="example@mail.ru"
-          autocomplete="email"
-          required
-        >
+        <label class="order-form__label" for="order-email">E-mail <span class="order-form__required" aria-hidden="true">*</span></label>
+        <input class="order-form__input" id="order-email" name="email" type="email" placeholder="example@mail.ru" autocomplete="email" required>
       </div>
 
       <div class="order-form__field">
-        <label class="order-form__label" for="order-phone">Телефон</label>
-        <input
-          class="order-form__input"
-          id="order-phone"
-          name="phone"
-          type="tel"
-          inputmode="tel"
-          placeholder="+7 (900) 000-00-00"
-          pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"
-          required
-        >
-        <small class="order-form__hint">Формат: +7 (900) 000-00-00</small>
+        <label class="order-form__label" for="order-phone">Телефон <span class="order-form__required" aria-hidden="true">*</span></label>
+        <input class="order-form__input" id="order-phone" name="phone" type="tel" inputmode="tel" placeholder="+7 (900) 000-00-00" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" aria-describedby="order-phone-hint" required>
+        <small class="order-form__hint" id="order-phone-hint">Формат: +7 (900) 000-00-00</small>
       </div>
 
       <div class="order-form__field">
-        <label class="order-form__label" for="order-date">Дата связи</label>
-        <input
-          class="order-form__input"
-          id="order-date"
-          name="date"
-          type="date"
-        >
+        <label class="order-form__label" for="order-date">Удобная дата связи</label>
+        <input class="order-form__input" id="order-date" name="date" type="date">
       </div>
 
       <div class="order-form__field">
-        <label class="order-form__label" for="order-topic">Тема заявки</label>
+        <label class="order-form__label" for="order-topic">Тема заявки <span class="order-form__required" aria-hidden="true">*</span></label>
         <select class="order-form__select" id="order-topic" name="topic" required>
           <option value="">Выберите тему</option>
           <option value="product">Заказ товара</option>
@@ -161,25 +207,13 @@
 
       <div class="order-form__field">
         <label class="order-form__label" for="order-comment">Комментарий</label>
-        <textarea
-          class="order-form__textarea"
-          id="order-comment"
-          name="comment"
-          rows="4"
-          placeholder="Укажите дополнительную информацию"
-        ></textarea>
+        <textarea class="order-form__textarea" id="order-comment" name="comment" rows="3" placeholder="Цвет, объём памяти, удобное время"></textarea>
       </div>
 
       <div class="order-form__field order-form__field--checkbox">
         <label class="order-form__label">
-          <input
-            class="order-form__checkbox"
-            id="order-agreement"
-            name="agreement"
-            type="checkbox"
-            required
-          >
-          Я согласен на обработку данных
+          <input class="order-form__checkbox" id="order-agreement" name="agreement" type="checkbox" required>
+          Я согласен на обработку персональных данных
         </label>
       </div>
 
@@ -190,8 +224,8 @@
     </form>
   </dialog>
 
-  <p class="success-message" id="success-message" hidden>
-    Форма успешно отправлена!
+  <p class="success-message" id="success-message" role="status" hidden>
+    Заявка отправлена! Менеджер TechPoint свяжется с вами в ближайшее время.
   </p>
 </body>
 </html>

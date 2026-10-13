@@ -3,57 +3,102 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Контактная информация учебного интернет-магазина.">
-  <title>Контакты — Учебный интернет-магазин</title>
+  <meta name="description" content="Контакты магазина TechPoint: телефон, e-mail, адрес и режим работы.">
+  <title>Контакты — TechPoint</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
   <header class="site-header">
     <div class="site-header__inner">
-      <a class="site-header__logo" href="index.html">ShopProject</a>
+      <a class="site-header__logo" href="index.html">Tech<span class="site-header__logo-accent">Point</span></a>
       <nav class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
           <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
-          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="contacts.html">Контакты</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="contacts.html" aria-current="page">Контакты</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="index.html#advantages">Преимущества</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="index.html#popular">Популярные товары</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="index.html#contacts">Обратная связь</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html#popular">Популярное</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main class="page-main" id="main">
     <nav class="breadcrumbs" aria-label="Хлебные крошки">
       <a class="breadcrumbs__link" href="index.html">Главная</a>
-      <span class="breadcrumbs__current">Контакты</span>
+      <span class="breadcrumbs__current" aria-current="page">Контакты</span>
     </nav>
 
     <section class="section">
       <h1 class="section__title">Контакты</h1>
-      <p class="section__text">
-        Здесь размещается контактная информация учебного интернет-магазина.
-      </p>
-      <ul class="contacts-list">
-        <li class="contacts-list__item">Телефон: +7 (900) 000-00-00</li>
-        <li class="contacts-list__item">E-mail: info@example.com</li>
-        <li class="contacts-list__item">Адрес: г. Москва, учебный проект</li>
-      </ul>
+      <p class="section__text">Мы на связи каждый день — пишите, звоните или оставляйте заявку на сайте.</p>
     </section>
 
-    <section class="section" id="feedback">
-      <h2 class="section__title">Обратная связь</h2>
-      <p class="section__text">
-        Для отправки заявки используйте форму в модальном окне на главной странице.
-      </p>
-      <a class="button button--primary" href="index.html#contacts">Перейти к форме</a>
-    </section>
+    <div class="contacts-layout">
+      <section class="contacts-card">
+        <h2 class="contacts-card__title">Как связаться</h2>
+        <ul class="contacts-list">
+          <li class="contacts-list__item">
+            <span class="contacts-list__label">Телефон</span>
+            <a href="tel:+79000000000">+7 (900) 000-00-00</a>
+          </li>
+          <li class="contacts-list__item">
+            <span class="contacts-list__label">E-mail</span>
+            <a href="mailto:info@techpoint.example">info@techpoint.example</a>
+          </li>
+          <li class="contacts-list__item">
+            <span class="contacts-list__label">Адрес</span>
+            г. Москва, учебный проект
+          </li>
+          <li class="contacts-list__item">
+            <span class="contacts-list__label">Режим работы</span>
+            Ежедневно с 10:00 до 20:00
+          </li>
+        </ul>
+      </section>
+
+      <section class="contacts-card" id="feedback">
+        <h2 class="contacts-card__title">Обратная связь</h2>
+        <p class="contacts-card__text">
+          Хотите узнать о наличии модели, договориться о просмотре или задать вопрос по гарантии?
+          Оставьте заявку — ответим в течение часа в рабочее время.
+        </p>
+        <a class="button button--primary" href="order.html">Оставить заявку</a>
+      </section>
+    </div>
   </main>
 
-  <footer class="site-footer">
-    <p class="site-footer__text">&copy; 2026 Учебный проект. Все права защищены.</p>
-    <p class="site-footer__text">Дисциплина: Фронтенд и бэкенд разработка</p>
+  <footer class="site-footer" id="contacts">
+    <div class="site-footer__inner">
+      <div class="site-footer__column">
+        <p class="site-footer__logo">TechPoint</p>
+        <p class="site-footer__text">
+          Смартфоны и гаджеты с проверкой перед продажей и гарантией 30 дней.
+        </p>
+      </div>
+      <nav class="site-footer__column" aria-label="Навигация в подвале">
+        <h2 class="site-footer__title">Разделы</h2>
+        <ul class="site-footer__list">
+          <li><a class="site-footer__link" href="catalog.html">Каталог</a></li>
+          <li><a class="site-footer__link" href="order.html">Оформить заявку</a></li>
+          <li><a class="site-footer__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="site-footer__column">
+        <h2 class="site-footer__title">Связаться</h2>
+        <p class="site-footer__text">+7 (900) 000-00-00</p>
+        <p class="site-footer__text">info@techpoint.example</p>
+        <p class="site-footer__text">Ежедневно 10:00–20:00</p>
+      </div>
+    </div>
+    <p class="site-footer__bottom">
+      &copy; 2026 TechPoint. Учебный проект по дисциплине «Фронтенд и бэкенд разработка». Цены указаны для примера.
+    </p>
   </footer>
+
+  <a class="to-top" href="#" aria-label="Наверх">↑</a>
 </body>
 </html>
