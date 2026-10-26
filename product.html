@@ -6,6 +6,7 @@
   <meta name="description" content="Samsung Galaxy S23 Ultra: цена и характеристики.">
   <title>Galaxy S23 Ultra — TechPoint</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/product.js" defer></script>
 </head>
 <body>
   <header class="header">
@@ -30,13 +31,26 @@
 
     <article class="product">
       <div class="product__photo">
-        <span class="card__badge">Скидка</span>
         <img src="images/samsung-s23-ultra.jpg" alt="Samsung Galaxy S23 Ultra">
       </div>
       <div>
         <h1>Samsung Galaxy S23 Ultra</h1>
-        <p class="product__price">64 990 ₽ <s>74 990 ₽</s></p>
+        <p class="product__price product__price--sale"><span id="price" data-price="64990">64 990 ₽</span> <s id="old-price" data-price="74990">74 990 ₽</s></p>
         <p>Флагман Samsung с большим экраном, камерой 200 Мп и стилусом S Pen. Телефон проверен, есть гарантия магазина.</p>
+        <div class="options">
+          <p class="options__title">Память</p>
+          <label class="option"><input type="radio" name="memory" value="256 ГБ" data-extra="0" checked> 256 ГБ</label>
+          <label class="option"><input type="radio" name="memory" value="512 ГБ" data-extra="4000"> 512 ГБ</label>
+        </div>
+
+        <div class="options">
+          <p class="options__title">Цвет</p>
+          <label class="option"><input type="radio" name="color" value="чёрный" checked> Чёрный</label>
+          <label class="option"><input type="radio" name="color" value="белый"> Белый</label>
+        </div>
+
+        <p class="product__selected">Выбрано: <span id="selected">256 ГБ, чёрный</span></p>
+
         <a class="btn" href="order.html">Оформить заявку</a>
       </div>
     </article>
@@ -61,7 +75,7 @@
           </tr>
           <tr>
             <td>Память</td>
-            <td>12 ГБ / 256 ГБ</td>
+            <td>12 ГБ / 256 или 512 ГБ</td>
           </tr>
           <tr>
             <td>Камера</td>
@@ -73,7 +87,7 @@
           </tr>
           <tr>
             <td>Цвет</td>
-            <td>Чёрный</td>
+            <td>Чёрный, белый</td>
           </tr>
           <tr>
             <td>Гарантия</td>
