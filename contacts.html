@@ -3,57 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Контактная информация учебного интернет-магазина.">
-  <title>Контакты — Учебный интернет-магазин</title>
+  <meta name="description" content="Контакты магазина TechPoint.">
+  <title>Контакты — TechPoint</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="site-header__inner">
-      <a class="site-header__logo" href="index.html">ShopProject</a>
-      <nav class="site-nav" aria-label="Основная навигация">
-        <ul class="site-nav__list">
-          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
-          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="contacts.html">Контакты</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="index.html#advantages">Преимущества</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="index.html#popular">Популярные товары</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="index.html#contacts">Обратная связь</a></li>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="index.html">TechPoint</a>
+      <nav class="nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">Главная</a></li>
+          <li><a class="nav__link" href="catalog.html">Каталог</a></li>
+          <li><a class="nav__link" href="order.html">Заказ</a></li>
+          <li><a class="nav__link nav__link--active" href="contacts.html">Контакты</a></li>
+          <li><a class="nav__link" href="index.html#advantages">О нас</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main>
-    <nav class="breadcrumbs" aria-label="Хлебные крошки">
-      <a class="breadcrumbs__link" href="index.html">Главная</a>
-      <span class="breadcrumbs__current">Контакты</span>
+  <main class="container page">
+    <nav class="breadcrumbs">
+      <a href="index.html">Главная</a> / <span>Контакты</span>
     </nav>
 
+    <h1>Контакты</h1>
+
     <section class="section">
-      <h1 class="section__title">Контакты</h1>
-      <p class="section__text">
-        Здесь размещается контактная информация учебного интернет-магазина.
-      </p>
-      <ul class="contacts-list">
-        <li class="contacts-list__item">Телефон: +7 (900) 000-00-00</li>
-        <li class="contacts-list__item">E-mail: info@example.com</li>
-        <li class="contacts-list__item">Адрес: г. Москва, учебный проект</li>
+      <ul class="contacts">
+        <li>Телефон: <a href="tel:+78005553535">8 (800) 555-35-35</a></li>
+        <li>E-mail: <a href="mailto:abobaverygood@techpoint.example">abobaverygood@techpoint.example</a></li>
+        <li>Адрес: г. Москва, ул. Зелибобинская 228</li>
+        <li>Режим работы: каждый день с 10:00 до 20:00, но лучше давайте сами работайте и платите денежки</li>
       </ul>
     </section>
 
-    <section class="section" id="feedback">
-      <h2 class="section__title">Обратная связь</h2>
-      <p class="section__text">
-        Для отправки заявки используйте форму в модальном окне на главной странице.
-      </p>
-      <a class="button button--primary" href="index.html#contacts">Перейти к форме</a>
+    <section class="section">
+      <h2>Обратная связь</h2>
+      <p>Есть вопрос или хотите заказать телефон? Оставьте заявку.</p>
+      <a class="btn" href="order.html">Оставить заявку</a>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <p class="site-footer__text">&copy; 2026 Учебный проект. Все права защищены.</p>
-    <p class="site-footer__text">Дисциплина: Фронтенд и бэкенд разработка</p>
+  <footer class="footer" id="contacts">
+    <div class="container footer__inner">
+      <p>&copy; 2026 TechPoint</p>
+      <p>8 (800) 555-35-35 · abobaverygood@techpoint.example</p>
+      <p>Учебный проект, цены для примера</p>
+    </div>
   </footer>
+
+  <a class="to-top" href="#">↑</a>
 </body>
 </html>

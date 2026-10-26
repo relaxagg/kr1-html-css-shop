@@ -3,103 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Каталог товаров учебного интернет-магазина.">
-  <title>Каталог товаров — Учебный интернет-магазин</title>
+  <meta name="description" content="Каталог смартфонов Samsung Galaxy S23, S23+ и S23 Ultra.">
+  <title>Каталог — TechPoint</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="site-header__inner">
-      <a class="site-header__logo" href="index.html">ShopProject</a>
-      <nav class="site-nav" aria-label="Основная навигация">
-        <ul class="site-nav__list">
-          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
-          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="catalog.html">Каталог</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="index.html#advantages">Преимущества</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="index.html#popular">Популярные товары</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="index.html#contacts">Обратная связь</a></li>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="index.html">TechPoint</a>
+      <nav class="nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">Главная</a></li>
+          <li><a class="nav__link nav__link--active" href="catalog.html">Каталог</a></li>
+          <li><a class="nav__link" href="order.html">Заказ</a></li>
+          <li><a class="nav__link" href="contacts.html">Контакты</a></li>
+          <li><a class="nav__link" href="index.html#advantages">О нас</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main>
-    <nav class="breadcrumbs" aria-label="Хлебные крошки">
-      <a class="breadcrumbs__link" href="index.html">Главная</a>
-      <span class="breadcrumbs__current">Каталог</span>
+  <main class="container page">
+    <nav class="breadcrumbs">
+      <a href="index.html">Главная</a> / <span>Каталог</span>
     </nav>
 
-    <section class="section">
-      <h1 class="section__title">Каталог товаров</h1>
-      <p class="section__text">
-        На этой странице представлен учебный каталог товаров.
-        В дальнейшем здесь будут добавлены фильтры, сортировка и более
-        подробные карточки.
-      </p>
-    </section>
+    <h1>Каталог</h1>
 
-    <section class="catalog-layout">
-      <aside class="catalog-filters">
-        <h2 class="catalog-filters__title">Фильтры</h2>
-        <form class="filters-form" action="#" method="get">
-          <fieldset class="filters-form__fieldset">
-            <legend class="filters-form__legend">Категория</legend>
-            <label class="filters-form__label">
-              <input type="checkbox" name="category" value="all">
-              Все товары
-            </label>
-            <label class="filters-form__label">
-              <input type="checkbox" name="category" value="popular">
-              Популярные
-            </label>
-            <label class="filters-form__label">
-              <input type="checkbox" name="category" value="new">
-              Новинки
-            </label>
+    <div class="catalog">
+      <aside class="filters">
+        <h2>Фильтры</h2>
+        <form action="#" method="get">
+          <fieldset class="filters__group">
+            <legend>Модель</legend>
+            <label><input type="checkbox" name="model" value="s23"> Galaxy S23</label>
+            <label><input type="checkbox" name="model" value="s23plus"> Galaxy S23+</label>
+            <label><input type="checkbox" name="model" value="s23ultra"> Galaxy S23 Ultra</label>
           </fieldset>
 
-          <fieldset class="filters-form__fieldset">
-            <legend class="filters-form__legend">Цена</legend>
-            <label class="filters-form__label" for="price-from">От</label>
-            <input class="filters-form__input" id="price-from" name="price-from" type="number" min="0" placeholder="0">
-            <label class="filters-form__label" for="price-to">До</label>
-            <input class="filters-form__input" id="price-to" name="price-to" type="number" min="0" placeholder="5000">
+          <fieldset class="filters__group">
+            <legend>Цена, ₽</legend>
+            <label for="price-from">От</label>
+            <input class="form__input" id="price-from" name="price-from" type="number" min="0">
+            <label for="price-to">До</label>
+            <input class="form__input" id="price-to" name="price-to" type="number" min="0">
           </fieldset>
 
-          <button class="button button--primary" type="submit">Применить</button>
+          <button class="btn" type="submit">Показать</button>
         </form>
       </aside>
 
-      <section class="catalog-products">
-        <h2 class="catalog-products__title">Список товаров</h2>
-        <div class="products-grid">
-            <article class="product-card">
-              <h3 class="product-card__title">Товар 1</h3>
-              <p class="product-card__description">Краткое описание учебного товара.</p>
-              <p class="product-card__price">Цена: 1000 руб.</p>
-              <a class="button button--primary product-card__button" href="index.html#popular">Подробнее</a>
-            </article>
-            <article class="product-card">
-              <h3 class="product-card__title">Товар 2</h3>
-              <p class="product-card__description">Краткое описание учебного товара.</p>
-              <p class="product-card__price">Цена: 1500 руб.</p>
-              <a class="button button--primary product-card__button" href="index.html#popular">Подробнее</a>
-            </article>
-            <article class="product-card">
-              <h3 class="product-card__title">Товар 3</h3>
-              <p class="product-card__description">Краткое описание учебного товара.</p>
-              <p class="product-card__price">Цена: 2000 руб.</p>
-              <a class="button button--primary product-card__button" href="index.html#popular">Подробнее</a>
-            </article>
+      <section>
+        <div class="cards">
+          <article class="card card--hit">
+            <span class="card__badge">Хит</span>
+            <img class="card__img" src="images/samsung-s23.jpg" alt="Samsung Galaxy S23">
+            <h3 class="card__title">Samsung Galaxy S23</h3>
+            <p class="card__text">8/256 ГБ, экран 6,1 дюйма</p>
+            <p class="card__price">49 990 ₽</p>
+            <a class="btn btn--outline" href="product.html">Подробнее</a>
+          </article>
+          <article class="card">
+            <img class="card__img" src="images/samsung-s23-plus.jpg" alt="Samsung Galaxy S23+">
+            <h3 class="card__title">Samsung Galaxy S23+</h3>
+            <p class="card__text">8/256 ГБ, экран 6,6 дюйма</p>
+            <p class="card__price">57 990 ₽</p>
+            <a class="btn btn--outline" href="product.html">Подробнее</a>
+          </article>
+          <article class="card card--sale">
+            <span class="card__badge">Скидка</span>
+            <img class="card__img" src="images/samsung-s23-ultra.jpg" alt="Samsung Galaxy S23 Ultra">
+            <h3 class="card__title">Samsung Galaxy S23 Ultra</h3>
+            <p class="card__text">12/256 ГБ, экран 6,8 дюйма, стилус</p>
+            <p class="card__price">64 990 ₽ <s>74 990 ₽</s></p>
+            <a class="btn btn--outline" href="product.html">Подробнее</a>
+          </article>
         </div>
       </section>
-    </section>
+    </div>
   </main>
 
-  <footer class="site-footer">
-    <p class="site-footer__text">&copy; 2026 Учебный проект. Все права защищены.</p>
-    <p class="site-footer__text">Дисциплина: Фронтенд и бэкенд разработка</p>
+  <footer class="footer" id="contacts">
+    <div class="container footer__inner">
+      <p>&copy; 2026 TechPoint</p>
+      <p>8 (800) 555-35-35 · abobaverygood@techpoint.example</p>
+      <p>Учебный проект, цены для примера</p>
+    </div>
   </footer>
+
+  <a class="to-top" href="#">↑</a>
 </body>
 </html>

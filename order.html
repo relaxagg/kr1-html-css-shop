@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Оформление заявки на покупку смартфона в TechPoint.">
+  <title>Заказ — TechPoint</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="index.html">TechPoint</a>
+      <nav class="nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">Главная</a></li>
+          <li><a class="nav__link" href="catalog.html">Каталог</a></li>
+          <li><a class="nav__link nav__link--active" href="order.html">Заказ</a></li>
+          <li><a class="nav__link" href="contacts.html">Контакты</a></li>
+          <li><a class="nav__link" href="index.html#advantages">О нас</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page">
+    <nav class="breadcrumbs">
+      <a href="index.html">Главная</a> / <span>Заказ</span>
+    </nav>
+
+    <h1>Оформление заказа</h1>
+    <p>Заполните форму, и менеджер свяжется с вами.</p>
+
+    <form class="form form--page" action="#" method="post">
+      <div class="form__field">
+        <label class="form__label" for="order-name">Имя</label>
+        <input class="form__input" id="order-name" name="name" type="text" required>
+      </div>
+
+      <div class="form__field">
+        <label class="form__label" for="order-phone">Телефон</label>
+        <input class="form__input" id="order-phone" name="phone" type="tel" placeholder="+7 (900) 000-00-00" required>
+      </div>
+
+      <div class="form__field">
+        <label class="form__label" for="order-email">E-mail</label>
+        <input class="form__input" id="order-email" name="email" type="email" required>
+      </div>
+
+      <div class="form__field">
+        <label class="form__label" for="order-model">Модель</label>
+        <select class="form__input" id="order-model" name="model" required>
+          <option value="">Выберите модель</option>
+          <option>Samsung Galaxy S23</option>
+          <option>Samsung Galaxy S23+</option>
+          <option>Samsung Galaxy S23 Ultra</option>
+        </select>
+      </div>
+
+      <div class="form__field">
+        <label class="form__label" for="order-comment">Комментарий</label>
+        <textarea class="form__input" id="order-comment" name="comment" rows="4"></textarea>
+      </div>
+
+      <div class="form__field">
+        <label>
+          <input name="agree" type="checkbox" required>
+          Согласен на обработку данных
+        </label>
+      </div>
+
+      <button class="btn" type="submit">Отправить заявку</button>
+    </form>
+  </main>
+
+  <footer class="footer" id="contacts">
+    <div class="container footer__inner">
+      <p>&copy; 2026 TechPoint</p>
+      <p>8 (800) 555-35-35 · abobaverygood@techpoint.example</p>
+      <p>Учебный проект, цены для примера</p>
+    </div>
+  </footer>
+
+  <a class="to-top" href="#">↑</a>
+</body>
+</html>
