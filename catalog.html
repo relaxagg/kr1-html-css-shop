@@ -6,6 +6,7 @@
   <meta name="description" content="Каталог смартфонов Samsung Galaxy S23, S23+ и S23 Ultra.">
   <title>Каталог — TechPoint</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/catalog.js" defer></script>
 </head>
 <body>
   <header class="header">
@@ -33,7 +34,7 @@
     <div class="catalog">
       <aside class="filters">
         <h2>Фильтры</h2>
-        <form action="#" method="get">
+        <form id="filters" action="#" method="get">
           <fieldset class="filters__group">
             <legend>Модель</legend>
             <label><input type="checkbox" name="model" value="s23"> Galaxy S23</label>
@@ -49,29 +50,30 @@
             <input class="form__input" id="price-to" name="price-to" type="number" min="0">
           </fieldset>
 
-          <button class="btn" type="submit">Показать</button>
+          <div class="filters__buttons">
+            <button class="btn" type="submit">Показать</button>
+            <button class="btn btn--outline" type="reset">Сбросить</button>
+          </div>
         </form>
       </aside>
 
       <section>
         <div class="cards">
-          <article class="card card--hit">
-            <span class="card__badge">Хит</span>
+          <article class="card" data-model="s23" data-price="49990">
             <img class="card__img" src="images/samsung-s23.jpg" alt="Samsung Galaxy S23">
             <h3 class="card__title">Samsung Galaxy S23</h3>
             <p class="card__text">8/256 ГБ, экран 6,1 дюйма</p>
             <p class="card__price">49 990 ₽</p>
-            <a class="btn btn--outline" href="product.html">Подробнее</a>
+            <a class="btn btn--outline" href="product-s23.html">Подробнее</a>
           </article>
-          <article class="card">
+          <article class="card" data-model="s23plus" data-price="57990">
             <img class="card__img" src="images/samsung-s23-plus.jpg" alt="Samsung Galaxy S23+">
             <h3 class="card__title">Samsung Galaxy S23+</h3>
             <p class="card__text">8/256 ГБ, экран 6,6 дюйма</p>
             <p class="card__price">57 990 ₽</p>
-            <a class="btn btn--outline" href="product.html">Подробнее</a>
+            <a class="btn btn--outline" href="product-s23-plus.html">Подробнее</a>
           </article>
-          <article class="card card--sale">
-            <span class="card__badge">Скидка</span>
+          <article class="card card--sale" data-model="s23ultra" data-price="64990">
             <img class="card__img" src="images/samsung-s23-ultra.jpg" alt="Samsung Galaxy S23 Ultra">
             <h3 class="card__title">Samsung Galaxy S23 Ultra</h3>
             <p class="card__text">12/256 ГБ, экран 6,8 дюйма, стилус</p>
@@ -79,6 +81,7 @@
             <a class="btn btn--outline" href="product.html">Подробнее</a>
           </article>
         </div>
+        <p class="empty-message" id="empty-message" hidden>Ничего не найдено. Попробуйте изменить фильтры.</p>
       </section>
     </div>
   </main>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Samsung Galaxy S23+: цена и характеристики.">
+  <title>Galaxy S23+ — TechPoint</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/product.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="index.html">TechPoint</a>
+      <nav class="nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">Главная</a></li>
+          <li><a class="nav__link nav__link--active" href="catalog.html">Каталог</a></li>
+          <li><a class="nav__link" href="order.html">Заказ</a></li>
+          <li><a class="nav__link" href="contacts.html">Контакты</a></li>
+          <li><a class="nav__link" href="index.html#advantages">О нас</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page">
+    <nav class="breadcrumbs">
+      <a href="index.html">Главная</a> / <a href="catalog.html">Каталог</a> / <span>Galaxy S23+</span>
+    </nav>
+
+    <article class="product">
+      <div class="product__photo">
+        <img src="images/samsung-s23-plus.jpg" alt="Samsung Galaxy S23+">
+      </div>
+      <div>
+        <h1>Samsung Galaxy S23+</h1>
+        <p class="product__price"><span id="price" data-price="57990">57 990 ₽</span></p>
+        <p>Как S23, только с экраном побольше и батареей на 4700 мА·ч. Телефон проверен, есть гарантия магазина.</p>
+        <div class="options">
+          <p class="options__title">Память</p>
+          <label class="option"><input type="radio" name="memory" value="256 ГБ" data-extra="0" checked> 256 ГБ</label>
+          <label class="option"><input type="radio" name="memory" value="512 ГБ" data-extra="4000"> 512 ГБ</label>
+        </div>
+
+        <div class="options">
+          <p class="options__title">Цвет</p>
+          <label class="option"><input type="radio" name="color" value="чёрный" checked> Чёрный</label>
+          <label class="option"><input type="radio" name="color" value="белый"> Белый</label>
+        </div>
+
+        <p class="product__selected">Выбрано: <span id="selected">256 ГБ, чёрный</span></p>
+
+        <a class="btn" href="order.html">Оформить заявку</a>
+      </div>
+    </article>
+
+    <section class="section">
+      <table class="specs">
+        <caption>Характеристики</caption>
+        <thead>
+          <tr>
+            <th>Параметр</th>
+            <th>Значение</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Экран</td>
+            <td>6,6 дюйма, 120 Гц</td>
+          </tr>
+          <tr>
+            <td>Процессор</td>
+            <td>Snapdragon 8 Gen 2</td>
+          </tr>
+          <tr>
+            <td>Память</td>
+            <td>8 ГБ / 256 или 512 ГБ</td>
+          </tr>
+          <tr>
+            <td>Камера</td>
+            <td>50 Мп</td>
+          </tr>
+          <tr>
+            <td>Аккумулятор</td>
+            <td>4700 мА·ч</td>
+          </tr>
+          <tr>
+            <td>Цвет</td>
+            <td>Чёрный, белый</td>
+          </tr>
+          <tr>
+            <td>Гарантия</td>
+            <td>30 дней</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="footer" id="contacts">
+    <div class="container footer__inner">
+      <p>&copy; 2026 TechPoint</p>
+      <p>8 (800) 555-35-35 · abobaverygood@techpoint.example</p>
+      <p>Учебный проект, цены для примера</p>
+    </div>
+  </footer>
+
+  <a class="to-top" href="#">↑</a>
+</body>
+</html>
